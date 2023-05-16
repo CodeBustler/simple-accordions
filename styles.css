@@ -6,7 +6,10 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: lightgray;
+  background-color: whitesmoke;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 /* MAIN-CONTAINER */
@@ -52,12 +55,13 @@ body {
 .accordion-tab > .accordion-content {
   max-height: 0;
   overflow: hidden;
-  transition: 0.4s;
+  transition: 0.5s;
   background: white;
   border-radius: 0 0 8px 8px;
   position: relative;
   top: -10px;
   z-index: -1;
+  border: 1px solid rgba(128, 128, 128, 0.204);
 }
 
 .accordion-content p {
@@ -76,4 +80,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+@media only screen and (max-width: 555px) {
+  #projects {
+    flex-direction: column;
+  }
+}
+
+h2 {
+  text-align: center;
+  padding: 10px;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  color: grey;
+  position: absolute;
+  bottom: 20px;
+  z-index: -10;
 }
